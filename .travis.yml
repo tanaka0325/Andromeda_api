@@ -3,7 +3,8 @@ rvm:
   - 2.3.1
 services:
   - mysql
-bundler_args: --without production
+cache: bundler
+bundler_args: --without production --deployment
 before_script:
   - cp config/database.travis.yml config/database.yml
 script:
